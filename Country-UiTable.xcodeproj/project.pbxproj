@@ -7,12 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5D71237C2A7A386400751181 /* SVGKit in Frameworks */ = {isa = PBXBuildFile; productRef = 5D71237B2A7A386400751181 /* SVGKit */; };
+		5D71237E2A7A386400751181 /* SVGKitSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 5D71237D2A7A386400751181 /* SVGKitSwift */; };
 		5DBDE4192A7A1C36008F6D65 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DBDE4182A7A1C36008F6D65 /* AppDelegate.swift */; };
 		5DBDE41B2A7A1C36008F6D65 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DBDE41A2A7A1C36008F6D65 /* SceneDelegate.swift */; };
 		5DBDE41D2A7A1C36008F6D65 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DBDE41C2A7A1C36008F6D65 /* ViewController.swift */; };
 		5DBDE4202A7A1C36008F6D65 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5DBDE41E2A7A1C36008F6D65 /* Main.storyboard */; };
 		5DBDE4222A7A1C37008F6D65 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5DBDE4212A7A1C37008F6D65 /* Assets.xcassets */; };
 		5DBDE4252A7A1C37008F6D65 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5DBDE4232A7A1C37008F6D65 /* LaunchScreen.storyboard */; };
+		5DBDE42E2A7A1E2F008F6D65 /* country-flag.json in Resources */ = {isa = PBXBuildFile; fileRef = 5DBDE42D2A7A1E2F008F6D65 /* country-flag.json */; };
+		5DBDE4302A7A1EB5008F6D65 /* CountryProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DBDE42F2A7A1EB5008F6D65 /* CountryProvider.swift */; };
+		5DBDE4322A7A1EE5008F6D65 /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DBDE4312A7A1EE5008F6D65 /* Country.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +29,9 @@
 		5DBDE4212A7A1C37008F6D65 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5DBDE4242A7A1C37008F6D65 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5DBDE4262A7A1C37008F6D65 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5DBDE42D2A7A1E2F008F6D65 /* country-flag.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "country-flag.json"; sourceTree = "<group>"; };
+		5DBDE42F2A7A1EB5008F6D65 /* CountryProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryProvider.swift; sourceTree = "<group>"; };
+		5DBDE4312A7A1EE5008F6D65 /* Country.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +39,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5D71237E2A7A386400751181 /* SVGKitSwift in Frameworks */,
+				5D71237C2A7A386400751181 /* SVGKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,15 +66,26 @@
 		5DBDE4172A7A1C36008F6D65 /* Country-UiTable */ = {
 			isa = PBXGroup;
 			children = (
+				5DBDE42C2A7A1D95008F6D65 /* Models */,
 				5DBDE4182A7A1C36008F6D65 /* AppDelegate.swift */,
 				5DBDE41A2A7A1C36008F6D65 /* SceneDelegate.swift */,
 				5DBDE41C2A7A1C36008F6D65 /* ViewController.swift */,
 				5DBDE41E2A7A1C36008F6D65 /* Main.storyboard */,
+				5DBDE42D2A7A1E2F008F6D65 /* country-flag.json */,
 				5DBDE4212A7A1C37008F6D65 /* Assets.xcassets */,
 				5DBDE4232A7A1C37008F6D65 /* LaunchScreen.storyboard */,
 				5DBDE4262A7A1C37008F6D65 /* Info.plist */,
 			);
 			path = "Country-UiTable";
+			sourceTree = "<group>";
+		};
+		5DBDE42C2A7A1D95008F6D65 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				5DBDE42F2A7A1EB5008F6D65 /* CountryProvider.swift */,
+				5DBDE4312A7A1EE5008F6D65 /* Country.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +104,10 @@
 			dependencies = (
 			);
 			name = "Country-UiTable";
+			packageProductDependencies = (
+				5D71237B2A7A386400751181 /* SVGKit */,
+				5D71237D2A7A386400751181 /* SVGKitSwift */,
+			);
 			productName = "Country-UiTable";
 			productReference = 5DBDE4152A7A1C36008F6D65 /* Country-UiTable.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +136,9 @@
 				Base,
 			);
 			mainGroup = 5DBDE40C2A7A1C36008F6D65;
+			packageReferences = (
+				5D71237A2A7A386400751181 /* XCRemoteSwiftPackageReference "SVGKit" */,
+			);
 			productRefGroup = 5DBDE4162A7A1C36008F6D65 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -125,6 +153,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5DBDE42E2A7A1E2F008F6D65 /* country-flag.json in Resources */,
 				5DBDE4252A7A1C37008F6D65 /* LaunchScreen.storyboard in Resources */,
 				5DBDE4222A7A1C37008F6D65 /* Assets.xcassets in Resources */,
 				5DBDE4202A7A1C36008F6D65 /* Main.storyboard in Resources */,
@@ -141,6 +170,8 @@
 				5DBDE41D2A7A1C36008F6D65 /* ViewController.swift in Sources */,
 				5DBDE4192A7A1C36008F6D65 /* AppDelegate.swift in Sources */,
 				5DBDE41B2A7A1C36008F6D65 /* SceneDelegate.swift in Sources */,
+				5DBDE4322A7A1EE5008F6D65 /* Country.swift in Sources */,
+				5DBDE4302A7A1EB5008F6D65 /* CountryProvider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -358,6 +389,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		5D71237A2A7A386400751181 /* XCRemoteSwiftPackageReference "SVGKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SVGKit/SVGKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		5D71237B2A7A386400751181 /* SVGKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5D71237A2A7A386400751181 /* XCRemoteSwiftPackageReference "SVGKit" */;
+			productName = SVGKit;
+		};
+		5D71237D2A7A386400751181 /* SVGKitSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5D71237A2A7A386400751181 /* XCRemoteSwiftPackageReference "SVGKit" */;
+			productName = SVGKitSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 5DBDE40D2A7A1C36008F6D65 /* Project object */;
 }
